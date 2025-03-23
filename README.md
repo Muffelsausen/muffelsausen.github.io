@@ -11,11 +11,11 @@
             src: url('your-font-file.woff2') format('woff2');
         }
         body {
-            font-family: 'MuffelsausenFont', Arial, sans-serif;
-            background-image: url('background.PNG');
+            font-family: 'MuffelsausenFont', Fredoka, sans-serif;
+            background-color: purple;
             background-size: cover;
             background-position: center;
-            color: white;
+            color: yellow;
             text-align: center;
             padding: 50px;
         }

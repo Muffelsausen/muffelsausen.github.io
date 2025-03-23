@@ -12,10 +12,10 @@
         }
         body {
             font-family: 'MuffelsausenFont', Arial, sans-serif;
-            background-color: yellow;
+            background-image: url('background.PNG');
             background-size: cover;
             background-position: center;
-            color: black;
+            color: white;
             text-align: center;
             padding: 50px;
         }
@@ -47,13 +47,58 @@
         a:hover {
             background: #ffaa00;
         }
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: white;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            transition: left 0.3s ease;
+            padding-top: 60px;
+        }
+        .menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .menu.active {
+            left: 0;
+        }
     </style>
 </head>
 <body>
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+    </div>
     <div class="container">
         <h1>Muffelsausen</h1>
         <p>Welcome to the official Muffelsausen event page.</p>
         <p>Stay tuned for updates and details about the event!</p>
     </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

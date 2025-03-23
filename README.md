@@ -12,9 +12,10 @@
         }
         body {
             font-family: 'MuffelsausenFont', Fredoka, sans-serif;
-            background-color: purple;
+            background-color: rgb(128, 0, 128);
             background-size: cover;
             background-position: center;
+            margin-top: 50px; 
             color: yellow;
             text-align: center;
             padding: 50px;
@@ -59,11 +60,11 @@
         }
         .menu {
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: -250px;
             width: 250px;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            height: 87%;
+            background: rgba(128, 0, 128, 1);
             transition: left 0.3s ease;
             padding-top: 60px;
         }
@@ -75,29 +76,43 @@
             font-size: 1.5em;
         }
         .menu a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(128, 0, 128, 1);
         }
         .menu.active {
             left: 0;
+        }
+        .header-image {
+            width: 600px;
+            height: 300px;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <button class="menu-button" onclick="toggleMenu()">☰</button>
     <div class="menu" id="menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Events</a>
-        <a href="#">Contact</a>
+        <a href="main.html" onclick="toggleMenu()">Home</a>
+        <a href="event.html" onclick="toggleMenu()">Events</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
     </div>
     <div class="container">
         <h1>Muffelsausen</h1>
+        <img src="figures/logo.PNG" alt="Muffelsausen Event" class="header-image" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px;">
         <p>Welcome to the official Muffelsausen event page.</p>
-        <p>Stay tuned for updates and details about the event!</p>
+        <p>Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla!</p>
     </div>
     <script>
         function toggleMenu() {
-            document.getElementById("menu").classList.toggle("active");
+            var menu = document.getElementById("menu");
+            if (menu.style.left === "0px") {
+                menu.style.left = "-250px";
+            } else {
+                menu.style.left = "0px";
+            }
         }
     </script>
 </body>

@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Muffelsausen</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('your-font-file.woff2') format('woff2');
+        }
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: 'CustomFont', Arial, sans-serif;
+            background-image: url('background.PNG');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 50px;
@@ -44,10 +50,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My GitHub Page</h1>
-        <p>This is a simple yet stylish website hosted on GitHub Pages.</p>
-        <p>Feel free to explore my projects and connect with me!</p>
-        <a href="https://github.com/YOUR-USERNAME" target="_blank">Visit My GitHub</a>
+        <h1>Muffelsausen</h1>
+        <p>This is a stylish website inspired by the event.</p>
+        <p>Stay tuned for more details!</p>
     </div>
 </body>
 </html>

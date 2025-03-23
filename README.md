@@ -12,10 +12,10 @@
         }
         body {
             font-family: 'MuffelsausenFont', Arial, sans-serif;
-            background-image: url('background.PNG');
+            background-color: yellow;
             background-size: cover;
             background-position: center;
-            color: white;
+            color: black;
             text-align: center;
             padding: 50px;
         }
